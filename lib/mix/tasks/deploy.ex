@@ -19,7 +19,7 @@ defmodule Mix.Tasks.Deploy do
     System.cmd("git", ["push", "origin", "--tags"])
 
     System.cmd("git", ["push", env, "master"])
-    System.cmd("heroku", ["run", "POOL_SIZE=2 mix ecto.migrate", "-r#{env}"])
+    System.cmd("heroku", ["run", "POOL_SIZE=1 mix ecto.migrate", "-r#{env}"])
     System.cmd("heroku", ["restart", "-r#{env}"])
   end
 end
