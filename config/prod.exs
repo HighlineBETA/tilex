@@ -44,7 +44,7 @@ config :tilex, Tilex.Repo,
 #
 # We also recommend setting `force_ssl`, ensuring no data is
 # ever sent via http, always redirecting to https:
-config :tilex, TilexWeb.Endpoint, force_ssl: [rewrite_on: [:x_forwarded_proto]]
+# config :tilex, TilexWeb.Endpoint, force_ssl: [rewrite_on: [:x_forwarded_proto]]
 
 # Check `Plug.SSL` for all available options in `force_ssl`.
 
